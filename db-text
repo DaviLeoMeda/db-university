@@ -32,3 +32,20 @@ SELECT count(*) FROM `students`; (5000)
 
 
 
+1. Contare i corsi raggruppati per cfu
+
+SELECT count(*) FROM `courses` GROUP BY `cfu`;
+
+2. Contare gli studenti raggruppati per anno di nascita
+
+SELECT count(*) FROM `students` GROUP BY YEAR(`date_of_birth`);
+
+3. Selezionare il voto più basso dato ad ogni appello d'esame
+
+SELECT exam_id, MIN(vote) FROM `exam_student` GROUP BY `exam_id`;
+
+4. Contare gli appelli d'esame del mese di luglio raggruppati per giorno
+
+SELECT COUNT(*), DAY(date) FROM `exams` WHERE MONTH(date) = 07 GROUP BY DAY(date);
+
+
