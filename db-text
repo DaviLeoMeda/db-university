@@ -28,5 +28,7 @@ SELECT * FROM `exams` WHERE DATE(date) BETWEEN '2020-06-01' AND '2020-07-31';
 
 8. Qual è il numero totale degli studenti iscritti? (5000)
 
+SELECT count(*) FROM `students`; (5000)
+
 
 
