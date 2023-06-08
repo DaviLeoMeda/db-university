@@ -20,7 +20,13 @@ SELECT * FROM `courses` WHERE `website` is NULL;
 
 6. Selezionare tutti gli insegnanti che hanno un numero di telefono (50)
 
-
+SELECT * FROM `teachers` WHERE NOT `phone` is NULL;
 
 7. Selezionare tutti gli appelli d'esame dei mesi di giugno e luglio 2020 (2634)
+
+SELECT * FROM `exams` WHERE DATE(date) BETWEEN '2020-06-01' AND '2020-07-31';
+
 8. Qual è il numero totale degli studenti iscritti? (5000)
+
+
+
